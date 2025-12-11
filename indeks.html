@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADIBATI — Arah Digitalisasi Inovasi Batik Indonesia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Splash Screen Styles */
+    #splash-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fdfaf6; /* Warna latar yang lembut */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 9999;
+      transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
+      font-family: 'Poppins', sans-serif;
+      color: var(--brown-2, #6b3f26);
+    }
+    #splash-screen.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+    #splash-screen h1 {
+      font-size: 2.5rem;
+      margin: 10px 0 5px;
+    }
+  </style>
+</head>
+<body>
+  <div id="splash-screen">
+    <div class="splash-content">
+      <svg width="88" height="88" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C14.7 4 18 8 18 11c0 4-6 10-6 10s-6-6-6-10c0-3 3.3-7 6-9z" fill="#c99b6b" opacity="0.95"></path><path d="M12 7c1.66 0 3 1.34 3 3S13.66 13 12 13s-3-1.34-3-3 1.34-3 3-3z" fill="#fff"></path></svg>
+      <h1>ADIBATI</h1>
+      <p class="lead">Arah Digitalisasi Inovasi Batik Indonesia</p>
+      <div class="splash-footer">
+        <button id="enter-btn" class="btn">Masuk ke Beranda</button>
+      </div>
+    </div>
+  </div>
+  <div class="batik-bg" aria-hidden></div>
+  <!-- Decorative Batik Background Images -->
+  <div class="batik-decor mega"></div>
+  <div class="batik-decor parang"></div>
+  <div class="batik-decor gedog"></div>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden>
+          <!-- simple batik leaf mark -->
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C14.7 4 18 8 18 11c0 4-6 10-6 10s-6-6-6-10c0-3 3.3-7 6-9z" fill="#fff" opacity="0.95"/>
+            <path d="M12 7c1.66 0 3 1.34 3 3S13.66 13 12 13s-3-1.34-3-3 1.34-3 3-3z" fill="#c99b6b"/>
+          </svg>
+        </div>
+        <div>
+          <h1>ADIBATI</h1>
+          <p class="lead">Arah Digitalisasi Inovasi Batik Indonesia</p>
+        </div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <a href="/" data-link data-target="home" class="active">Beranda</a>
+        <a href="#" data-link data-target="tujuan">Tujuan Proyek</a>
+        <a href="#" data-link data-target="energi">Energi Alternatif</a>
+        <a href="#" data-link data-target="ai">Inovasi Motif</a>
+        <a href="#" data-link data-target="literasi">Literasi Teknologi</a>
+        <a href="#" data-link data-target="sejarah">Sejarah & Motif</a>
+        <a href="#" data-link data-target="kontak">Kontak</a>
+        <a href="#" data-link data-target="kuis">Kuis Batik</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="page active">
+        <!-- Hero Section Baru yang Lebih Fokus -->
+        <div class="card hero-card">
+          <div class="hero-content">
+            <h2>Ketika Budaya Menyentuh Cahaya Digital, Batik Maju Tanpa Kehilangan Jiwanya.</h2>
+            <p class="text">ADIBATI adalah sebuah inisiatif untuk melestarikan warisan batik melalui teknologi, mendukung pengrajin lokal, dan mempromosikan praktik berkelanjutan.</p>
+            <div class="cta">
+              <a class="btn" data-link data-target="tujuan">Jelajahi Misi Kami</a>
+              <a class="btn secondary" data-link data-target="sejarah">Lihat Galeri Motif</a>
+            </div>
+          </div>
+          <div class="hero-image-container">
+            <img src="https://blog.knitto.co.id/wp-content/uploads/2024/01/Batik-Sekar-Jagad-Warna-Klasik-_-Sumber_-Freepik.jpg" alt="Ilustrasi Motif Batik Sekar Jagad" class="hero-image">
+          </div>
+        </div>
+
+        <!-- Pilar Utama Proyek -->
+        <div class="pilar-container">
+          <div class="card pilar-card" data-link data-target="energi">
+            <div class="icon">💡</div>
+            <h3>Energi Berkelanjutan</h3>
+            <p class="text-small">Mengurangi jejak lingkungan dengan energi alternatif dalam proses membatik.</p>
+          </div>
+          <div class="card pilar-card" data-link data-target="ai">
+            <div class="icon">🎨</div>
+            <h3>Inovasi Motif Digital</h3>
+            <p class="text-small">Menggunakan AI untuk restorasi dan pengembangan motif baru yang menghormati tradisi.</p>
+          </div>
+          <div class="card pilar-card" data-link data-target="literasi">
+            <div class="icon">👩‍💻</div>
+            <h3>Literasi Teknologi</h3>
+            <p class="text-small">Memberdayakan pengrajin dengan pelatihan digital untuk akses pasar yang lebih luas.</p>
+          </div>
+        </div>
+
+        <!-- Literacy Section -->
+        <div class="literacy-section card">
+          <h2 class="section-title" style="text-align: center; font-size: 24px; margin-bottom: 20px;">Memahami Misi ADIBATI</h2>
+          <div class="literacy-card intro-text">
+              <p>Di tengah pesatnya perkembangan teknologi, ADIBATI hadir sebagai gerakan digitalisasi yang mengarahkan transformasi batik menuju inovasi yang lebih maju tanpa meninggalkan identitas dan nilai-nilai luhur warisan Nusantara.</p>
+          </div>
+          <div class="literacy-grid">
+              <div class="literacy-card pillar">
+                  <h3>1. Digitalisasi Motif & Arsip</h3>
+                  <p>Membangun perpustakaan visual batik Indonesia yang dapat diakses dengan mudah untuk memfasilitasi penelitian, dokumentasi, dan regenerasi motif.</p>
+              </div>
+              <div class="literacy-card pillar">
+                  <h3>2. Inovasi Teknologi Kreatif</h3>
+                  <p>Mendorong penggunaan teknologi seperti AI untuk menciptakan karya batik yang relevan dengan kebutuhan zaman tanpa meninggalkan ruh budayanya.</p>
+              </div>
+              <div class="literacy-card pillar">
+                  <h3>3. Pemberdayaan Perajin</h3>
+                  <p>Berfokus pada pemberdayaan perajin melalui pelatihan teknologi dan pengenalan platform pemasaran digital untuk memperkuat ekonomi mereka.</p>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tujuan Proyek -->
+      <section id="tujuan" class="page">
+        <div class="card">
+          <button class="back-btn" aria-label="Kembali">&larr; Kembali</button>
+          <h2 class="section-title">Tujuan Proyek</h2>
+          <p class="text">Proyek ini bertujuan untuk:</p>
+          <ul class="text">
+            <li>Mendokumentasikan dan melestarikan motif-motif batik tradisional dari berbagai daerah Indonesia.</li>
+            <li>Mendukung pengrajin batik melalui pelatihan teknologi dan akses ke pasar digital.</li>
+            <li>Mengurangi jejak lingkungan proses produksi batik dengan solusi energi alternatif dan praktik ramah lingkungan.</li>
+            <li>Menciptakan ekosistem inovasi merancang motif baru yang menghormati tradisi.</li>
+          </ul>
+
+          <hr style="margin:18px 0;border:none;border-top:1px dashed rgba(107,63,38,0.06)">
+
+          <div class="section-grid">
+            <div class="example">
+              <h3>Pemberdayaan Pengrajin</h3>
+              <div class="feature">
+                <div class="icon">P</div>
+                <div>
+                  <div class="small">Pelatihan digital & e-commerce</div>
+                  <div class="text">Membantu pengrajin memasarkan karya mereka secara online, mengelola pesanan, dan memahami harga pasar.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="example">
+              <h3>Dokumentasi Motif</h3>
+              <div class="text">Mencatat sejarah, makna, dan teknik pewarnaan setiap motif agar tidak hilang dari generasi ke generasi.</div>
+            </div>
+
+            <div class="example">
+              <h3>Riset & Kolaborasi</h3>
+              <div class="text">Kolaborasi dengan akademisi, museum, dan komunitas lokal untuk verifikasi serta program residensi desain.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Energi Alternatif -->
+      <section id="energi" class="page">
+        <div class="card">
+          <button class="back-btn" aria-label="Kembali">&larr; Kembali</button>
+          <h2 class="section-title">Energi Alternatif untuk Batik Berkelanjutan</h2>
+          <p class="text">Proses batik tradisional seringkali membutuhkan energi untuk pemanasan malam-malam, pewarnaan, dan pengeringan. Beberapa solusi yang dapat diterapkan:</p>
+          <ul class="text">
+            <li><strong>Panel surya skala kecil</strong> untuk menggerakkan pompa pewarna dan pengering.</li>
+            <li><strong>Biomassa terkontrol</strong> menggunakan limbah pertanian yang diproses agar emisi lebih rendah.</li>
+            <li><strong>Efisiensi termal</strong> pada tungku pewarnaan, isolasi dan desain ulang peralatan untuk menghemat energi.</li>
+          </ul>
+
+          <div style="margin-top:12px" class="section-grid">
+            <div class="example">
+              <h3>Solusi Komunitas</h3>
+              <div class="text">Unit energi bersama (microgrid) di desa pengrajin agar biaya lebih rendah dan pemeliharaan terpusat.</div>
+            </div>
+            <div class="example">
+              <h3>Manfaat Lingkungan</h3>
+              <div class="text">Mengurangi karbon dan polusi air dengan teknologi pewarnaan yang lebih bersih.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AI & Inovasi Motif -->
+      <section id="ai" class="page">
+        <div class="card">
+          <button class="back-btn" aria-label="Kembali">&larr; Kembali</button>
+          <h2 class="section-title">AI untuk Inovasi Motif Batik</h2>
+          <p class="text">Kecerdasan buatan dapat mendukung kreativitas pengrajin, bukan menggantikannya. Contoh penggunaan:</p>
+          <ul class="text">
+            <li><strong>Generative design</strong> untuk kombinasi warna dan tata letak motif yang tetap menghormati aturan tradisional.</li>
+            <li><strong>Restorasi motif</strong> dari foto-foto lama yang terpotong atau pudar sehingga motif dapat dipulihkan secara akurat.</li>
+            <li><strong>Pendeteksian plagiarisme</strong> untuk membantu melindungi karya pengrajin dari peniruan massal.</li>
+          </ul>
+
+          <hr style="margin:18px 0;border:none;border-top:1px dashed rgba(107,63,38,0.06)">
+
+          <div class="section-grid">
+            <div class="example">
+              <h3>Contoh Fitur AI</h3>
+              <div class="feature">
+                <div class="icon">A</div>
+                <div>
+                  <div class="small">AI Motif Lab</div>
+                  <div class="text">Alat berbasis web yang menghasilkan sketsa variasi motif berdasarkan pola tradisional yang dipilih pengrajin.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="example">
+              <h3>Etika & Tradisi</h3>
+              <div class="text">Model AI dilatih dengan dataset yang berasal dari pengrajin yang memberikan izin — hak cipta budaya dihormati dan ada skema benefit-sharing.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Literasi Teknologi -->
+      <section id="literasi" class="page">
+        <div class="card">
+          <button class="back-btn" aria-label="Kembali">&larr; Kembali</button>
+          <h2 class="section-title">Literasi Teknologi dan AI untuk Pengrajin</h2>
+          <p class="text">Penting bahwa pengrajin memahami alat digital dasar agar dapat memanfaatkan peluang pasar. Program mencakup:</p>
+          <ul class="text">
+            <li>Pelatihan dasar penggunaan perangkat (ponsel & komputer)</li>
+            <li>Pengenalan e-commerce, fotografi produk, dan pemasaran digital</li>
+            <li>Workshop AI sederhana: bagaimana menggunakan generator motif, menyimpan aset digital, dan memahami lisensi</li>
+          </ul>
+
+          <div style="margin-top:12px" class="section-grid">
+            <div class="example">
+              <h3>Workshop Lokakarya</h3>
+              <div class="text">Sesi tatap muka & modul online yang dirancang mudah dipahami untuk pengrajin dari berbagai usia.</div>
+            </div>
+            <div class="example">
+              <h3>Materi Mudah Diakses</h3>
+              <div class="text">Video, panduan bergambar, dan template yang bisa digunakan di lapangan tanpa koneksi internet.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sejarah & Motif -->
+      <section id="sejarah" class="page">
+        <div class="card">
+          <h2 class="section-title">Galeri Interaktif Motif Batik</h2>
+          <p class="text">Jelajahi berbagai motif batik Indonesia. Klik pada gambar untuk detail lebih lanjut!</p>
+
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Semua</button>
+            <button class="filter-btn" data-filter="jawa-barat">Jawa Barat</button>
+            <button class="filter-btn" data-filter="jawa-tengah">Jawa Tengah</button>
+            <button class="filter-btn" data-filter="jawa-timur">Jawa Timur</button>
+            <button class="filter-btn" data-filter="bali">Bali</button>
+            <button class="filter-btn" data-filter="sumatera">Sumatera</button>
+            <button class="filter-btn" data-filter="kalimantan">Kalimantan</button>
+            <button class="filter-btn" data-filter="papua">Papua</button>
+          </div>
+
+          <div class="gallery-grid">
+            <div class="gallery-item" data-region="jawa-barat" data-motif="mega-mendung">
+              <div class="batik-img" role="img" aria-label="Mega Mendung" tabindex="0">
+                <img src="https://bcaf.telkomuniversity.ac.id/wp-content/uploads/2024/06/028577700_1443707050-Batik-Mega-Mendung-1024x768.webp" alt="Batik Mega Mendung" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              <div class="caption">Mega Mendung — Cirebon</div>
+            </div>
+
+            <div class="gallery-item" data-region="jawa-tengah" data-motif="kawung">
+              <div class="batik-img" role="img" aria-label="Kawung" tabindex="0">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwgs9uoavwCslxknlu-c9nZfPVFeanj7qKrg&s" alt="Batik Kawung" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              <div class="caption">Kawung — Yogyakarta</div>
+            </div>
+
+            <div class="gallery-item" data-region="jawa-tengah" data-motif="parang">
+              <div class="batik-img" role="img" aria-label="Parang" tabindex="0">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/048/387/544/small/batik-parang-style-illustration-for-background-wallpaper-and-clothes-textile-free-vector.jpg" alt="Batik Parang" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              <div class="caption">Parang — Yogyakarta</div>
+            </div>
+
+            <div class="gallery-item" data-region="jawa-tengah" data-motif="tambal">
+              <div class="batik-img" role="img" aria-label="Tambal" tabindex="0">
+                <img src="https://upload.wikimedia.org/wikipedia/id/7/76/BatikTambal.JPG" alt="Batik Tambal" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              <div class="caption">Tambal — Pekalongan</div>
+            </div>
+
+            <div class="gallery-item" data-region="bali" data-motif="sekar-jagad">
+              <div class="batik-img" role="img" aria-label="Sekar Jagad" tabindex="0">
+                <img src="https://blog.knitto.co.id/wp-content/uploads/2024/01/Batik-Sekar-Jagad-Warna-Klasik-_-Sumber_-Freepik.jpg" alt="batik tenun" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              <div class="caption">Sekar Jagad — Bali</div>
+            </div>
+
+            <div class="gallery-item" data-region="sumatera" data-motif="tenun">
+              <div class="batik-img" role="img" aria-label="Tenun" tabindex="0">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTElPO_7hpy0lEogv5wGEZoQUIz0pTF1B75EQ&s" alt="batik sekar jagad" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              <div class="caption">Tenun — Sumatera</div>
+            </div>
+
+            <div class="gallery-item" data-region="jawa-tengah" data-motif="tujuh-rupa">
+              <div class="batik-img" role="img" aria-label="Tujuh Rupa" tabindex="0">
+                <img src="https://fitinline.com/data/article/20220321/Batik-Tujuh-Rupa-001.jpg" alt="Batik Tujuh Rupa" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              <div class="caption">Tujuh Rupa — Pekalongan</div>
+            </div>
+
+            <div class="gallery-item" data-region="jawa-timur" data-motif="gentongan">
+              <div class="batik-img" role="img" aria-label="Gentongan" tabindex="0">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQykp0jOfCHOYSX0rNbQPYMyLC04oRtOWk7IA&s" alt="Batik Gentongan" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              <div class="caption">Gentongan — Madura</div>
+            </div>
+
+            <div class="gallery-item" data-region="jawa-tengah" data-motif="lasem">
+              <div class="batik-img" role="img" aria-label="Lasem" tabindex="0">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5b3srF1YC_DqPgnHk5o5JcBtY76SaeifDDA&s" alt="Batik Lasem" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              <div class="caption">Lasem — Rembang</div>
+            </div>
+
+            <div class="gallery-item" data-region="jawa-timur" data-motif="pringgondani">
+              <div class="batik-img" role="img" aria-label="Pringgondani" tabindex="0">
+                <img src="https://upload.wikimedia.org/wikipedia/id/e/e1/BatikPringgondani.JPG" alt="Batik Pringgondani" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              <div class="caption">Pringgondani — Magetan</div>
+            </div>
+
+            <div class="gallery-item" data-region="jawa-tengah" data-motif="sidoasih">
+              <div class="batik-img" role="img" aria-label="Sidoasih" tabindex="0">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCsKi7jPWGn9WEpqVIGPgh9Z4tfOjRlcrVAA&s" alt="Batik Sidoasih" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              <div class="caption">Sidoasih — Surakarta</div>
+            </div>
+
+            <div class="gallery-item" data-region="bali" data-motif="ulamsari">
+              <div class="batik-img" role="img" aria-label="Ulamsari" tabindex="0">
+                <img src="https://i.pinimg.com/564x/fb/d8/16/fbd816929d3c4df72a9c54e6ef9d43f5.jpg" alt="Batik Ulamsari" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              <div class="caption">Ulamsari — Bali</div>
+            </div>
+
+            <div class="gallery-item" data-region="kalimantan" data-motif="dayak">
+              <div class="batik-img" role="img" aria-label="Dayak" tabindex="0">
+                <img src="https://cnc-magazine.oramiland.com/parenting/images/Batik_Dayak.width-800.format-webp.webp" alt="Batik Dayak" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              <div class="caption">Motif Dayak — Kalimantan</div>
+            </div>
+
+            <div class="gallery-item" data-region="papua" data-motif="cendrawasih">
+              <div class="batik-img" role="img" aria-label="Cendrawasih" tabindex="0">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk2I_UVCZk-xKNaSQ-plpASgn1TEBktk3HLQ&s" alt="Batik Cendrawasih" style="width:100%;height:100%;object-fit:cover;">
+              </div>
+              <div class="caption">Cendrawasih — Papua</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal for motif details -->
+        <div id="motif-modal" class="modal" style="display: none;">
+          <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 id="modal-title">Detail Motif</h3>
+            <div id="modal-image"></div>
+            <p id="modal-description">Deskripsi motif akan muncul di sini.</p>
+            <style>
+              #modal-image img {
+                width: 100%;
+                max-height: 400px; /* Batasi tinggi gambar agar tidak terlalu besar */
+                object-fit: cover;
+                border-radius: 8px;
+              }
+            </style>
+          </div>
+        </div>
+      </section>
+
+      <!-- Kontak -->
+      <section id="kontak" class="page">
+        <div class="card">
+          <button class="back-btn" aria-label="Kembali">&larr; Kembali</button>
+          <h2 class="section-title">Hubungi Kami</h2>
+          <p class="text">Ada pertanyaan tentang ADIBATI atau ingin berkolaborasi? Kirim pesan kepada kami! Pastikan untuk mengganti email tujuan di atribut 'action' formulir ini.</p>
+          <form id="contact-form" class="contact-form" action="https://formspree.io/f/putrikhairunisa198@gmail.com" method="POST">
+            <div class="form-group">
+              <label for="name">Nama</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Pesan</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn">Kirim Pesan</button>
+          </form>
+          <div id="form-response" class="form-response"></div>
+        </div>
+      </section>
+
+      <!-- Kuis Batik -->
+      <section id="kuis" class="page">
+        <div class="card">
+          <button class="back-btn" aria-label="Kembali">&larr; Kembali</button>
+          <h2 class="section-title">Kuis Pengetahuan Batik</h2>
+          <p class="text">Uji pengetahuan Anda tentang batik Indonesia! Jawab pertanyaan-pertanyaan berikut.</p>
+          <div id="quiz-container">
+            <div id="question-container" class="question-container">
+              <h3 id="question">Pertanyaan akan muncul di sini</h3>
+              <div id="answers" class="answers"></div>
+            </div>
+            <div id="quiz-result" class="quiz-result" style="display: none;">
+              <h3>Hasil Kuis</h3>
+              <div id="score" class="score-display"></div>
+              <p id="feedback">Feedback akan muncul di sini</p>
+              <button id="restart-quiz" class="btn">Mulai Lagi</button>
+            </div>
+            <button id="next-btn" class="btn" style="display: none;">Pertanyaan Berikutnya</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="small">© 2025 ADIBATI — Arah Digitalisasi Inovasi Batik Indonesia.</div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
